@@ -1,0 +1,194 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>VWO Login Dashboard Test Plan</title>
+      <style>
+        body { font-family: Arial, Helvetica, sans-serif; margin: 32px; color: #1f2a37; background: #ffffff; }
+        .header { background: #0F2B46; color: white; padding: 24px 28px; border-radius: 10px; }
+        .header h1 { margin: 0; font-size: 30px; }
+        .small { font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #f5f5f5; }
+        .section { margin-top: 28px; padding-top: 10px; border-top: 3px solid #F26B2C; }
+        h2 { color: #0F2B46; margin-bottom: 10px; font-size: 18px; }
+        h3 { color: #F26B2C; margin-bottom: 8px; font-size: 14px; }
+        p, li { font-size: 12px; line-height: 1.7; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #dfe3e8; padding: 8px 10px; font-size: 12px; vertical-align: top; }
+        th { background: #F7F7F8; color: #0F2B46; text-align: left; }
+        ul { padding-left: 22px; }
+        .meta { background: #F7F7F8; border: 1px solid #e6e9ed; padding: 16px; border-radius: 8px; }
+      </style>
+    </head>
+    <body>
+      <div class="header">
+        <div class="small">VWO | Quality Engineering</div>
+        <h1>Login Dashboard Test Plan</h1>
+      </div>
+
+      <div class="meta" style="margin-top: 18px;">
+        <p><strong>Product:</strong> VWO Login Dashboard</p>
+        <p><strong>Environment:</strong> app.vwo.com</p>
+        <p><strong>Purpose:</strong> Validate secure access, login usability, and dashboard onboarding experience.</p>
+      </div>
+
+      <div class="section">
+        <h2>1. Objective</h2>
+        <p>The goal of this test plan is to validate that the VWO login dashboard provides secure, reliable, and user-friendly access to the platform while supporting responsive usage across desktop and mobile environments.</p>
+        <p>Testing will confirm that users can successfully sign in, recover access when needed, and move into the VWO experience without friction, while preserving consistent accessibility and data integrity.</p>
+      </div>
+
+      <div class="section">
+        <h2>2. Scope</h2>
+        <p>This plan covers the VWO login dashboard and related authentication journey, including sign-in, validation, recovery flows, accessibility, responsiveness, and onboarding transition to the main product experience.</p>
+        <ul>
+          <li>Functional validation for login and recovery flows</li>
+          <li>Security and data handling checks for authentication inputs and session management</li>
+          <li>Responsive and cross-browser validation for web and mobile experiences</li>
+          <li>Accessibility reviews for keyboard, focus, and screen reader support</li>
+          <li>Regression validation after changes to authentication logic or UI updates</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>3. Inclusions</h2>
+        <ul>
+          <li>Login with email and password</li>
+          <li>Validation for required fields and incorrect credentials</li>
+          <li>Forgot password flow and account recovery support</li>
+          <li>Remember me functionality</li>
+          <li>Registration link and trial onboarding entry point</li>
+          <li>Session timeout and secure redirect behavior</li>
+          <li>Responsive behavior across desktop and mobile breakpoints</li>
+          <li>Accessibility checks for labels, focus order, and keyboard interaction</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>4. Test Environments</h2>
+        <table>
+          <tr><th>Category</th><th>Configuration</th></tr>
+          <tr><td>Primary URL</td><td>https://app.vwo.com/login</td></tr>
+          <tr><td>Desktop Browsers</td><td>Windows 10: Chrome, Firefox, Edge</td></tr>
+          <tr><td>Mobile Browsers</td><td>Android: Chrome; iPhone: Safari</td></tr>
+          <tr><td>Operating Systems</td><td>Windows 10, macOS, Android, iPhone OS</td></tr>
+          <tr><td>Network</td><td>Wi-Fi, mobile data, and standard broadband conditions</td></tr>
+          <tr><td>Access Model</td><td>Standard user, trial user, and account recovery scenarios</td></tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>5. Test Strategy</h2>
+        <p>The testing approach follows a layered strategy combining functional validation, UX review, cross-environment checks, accessibility evaluation, and regression monitoring.</p>
+        <h3>Design Techniques</h3>
+        <ul>
+          <li>Equivalence class partitioning</li>
+          <li>Boundary value analysis</li>
+          <li>Decision table testing</li>
+          <li>State transition testing</li>
+          <li>Use case testing</li>
+          <li>Error guessing and exploratory testing</li>
+        </ul>
+        <h3>Execution Model</h3>
+        <ul>
+          <li>Smoke testing for critical login flows before detailed validation</li>
+          <li>Detailed functional, UI, and accessibility validation on stable builds</li>
+          <li>Parallel execution across supported environments when feasible</li>
+          <li>Regression checks after each change that affects authentication or navigation</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>6. Test Schedule</h2>
+        <table>
+          <tr><th>Activity</th><th>Planned Window</th></tr>
+          <tr><td>Test planning and scope confirmation</td><td>Week 1</td></tr>
+          <tr><td>Test case design</td><td>Week 1-2</td></tr>
+          <tr><td>Smoke and functional validation</td><td>Week 2-3</td></tr>
+          <tr><td>Responsive and accessibility review</td><td>Week 3</td></tr>
+          <tr><td>Regression and sign-off</td><td>Week 4</td></tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>7. Entry and Exit Criteria</h2>
+        <h3>Entry Criteria</h3>
+        <ul>
+          <li>Requirements and user flows are clearly defined</li>
+          <li>Build is available for each target environment</li>
+          <li>Test data supports valid and invalid authentication scenarios</li>
+          <li>Acceptance criteria for login and recovery flows are documented</li>
+        </ul>
+        <h3>Exit Criteria</h3>
+        <ul>
+          <li>All critical and high-priority test cases are executed</li>
+          <li>Defects are triaged and either resolved or accepted with justification</li>
+          <li>Regression checks are completed</li>
+          <li>Test summary and sign-off evidence are prepared</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>8. Test Execution</h2>
+        <h3>Core Functional Scenarios</h3>
+        <ul>
+          <li>Successful login using valid email and password</li>
+          <li>Validation when email format is invalid</li>
+          <li>Validation when password is missing or incorrect</li>
+          <li>Maintained session behavior after login</li>
+          <li>Redirect to the main dashboard after successful sign-in</li>
+          <li>Forgot password flow with secure reset confirmation</li>
+          <li>Remember me behavior across sessions</li>
+          <li>Registration flow and onboarding journey entry</li>
+        </ul>
+        <h3>Usability and Accessibility Scenarios</h3>
+        <ul>
+          <li>Keyboard-only navigation through login form</li>
+          <li>Visible focus states on all interactive controls</li>
+          <li>Clickable labels and proper field association</li>
+          <li>Touch-friendly target sizing on mobile devices</li>
+          <li>Screen reader compatibility for form instructions and errors</li>
+          <li>High-contrast readability across light and dark modes</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>9. Defect Reporting Procedure</h2>
+        <p>All defects are logged with clear reproduction steps, expected result, actual result, environment details, and screenshots or screen recordings where helpful. Each issue is classified by severity and priority and reviewed before closure.</p>
+        <ul>
+          <li>Capture accurate reproduction steps and browser/device context</li>
+          <li>Attach evidence such as screenshots, logs, or recordings</li>
+          <li>Associate each finding to relevant user flow or requirement</li>
+          <li>Confirm fix status and retest with the original scenario</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>10. Tools</h2>
+        <ul>
+          <li>JIRA for defect tracking and issue management</li>
+          <li>Browser developer tools for validation and debugging</li>
+          <li>Screen capture tools for evidence collection</li>
+          <li>Documentation tools for test case and summary reporting</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>11. Deliverables</h2>
+        <ul>
+          <li>Test plan</li>
+          <li>Test scenarios and test cases</li>
+          <li>Execution report</li>
+          <li>Defect log and summary</li>
+          <li>Final sign-off report</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>12. Approvals</h2>
+        <p>Testing will continue only after the required documentation is reviewed and approved for the relevant release milestone. Approval checkpoints include the test plan, execution readiness, and the final summary report.</p>
+      </div>
+    </body>
+    </html>
+    
